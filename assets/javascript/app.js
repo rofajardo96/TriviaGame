@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#start").on('click', triv.startTriv);
-    $(document).on('click' , '.option', triv.guessCheck);
+    $(document).on('click' , '.btn', triv.guessCheck);
 })
 
 var triv = {
@@ -91,25 +91,24 @@ var triv = {
       $('#question').text(questionContent);
 
       var questionChoices = Object.values(triv.choices)[triv.currentList];
-      $('#choices').text(triv.choices)[triv.currentList];
+      // $('#options').text(questionChoices);
+      
       
       
       $.each(questionChoices, function(index, key){
-        $('#choices').append($('<button id="choices">'+key+'</button>'));
-      })
-      
+        $('#options').append($('<button class="btn">'+key+'</button>'));
         
+      })
+   
     },
 
-    userGuess: function(){
-      $("#choices").click()
-    },
-
+    
     timerRunning : function(){
       // if timer still has time left and there are still questions left to ask
       if(triv.timer > -1 && triv.currentList < Object.keys(triv.questions).length){
         $('#timer').text(triv.timer);
         triv.timer--;
+
          
       }
       // the time has run out and increment unanswered, run result
@@ -139,6 +138,8 @@ var triv = {
         // show start button to begin a new game
         $('#start').show();
       }
+
+      
       
     },
 
@@ -148,12 +149,14 @@ var triv = {
       
       // timer ID for gameResult setTimeout
       var resultId;
-      
+      var userGuess = $('.btn').on('click', choices);
+      console.log(userGuess)
+
       // the answer to the current question being asked
       var currentAnswer = Object.values(triv.rightAnswers)[triv.currentList];
+      if($(this).text() === currentAnswer){
       
       // if the text of the option picked matches the answer of the current question, increment correct
-      if(userGuess === currentAnswer){
         triv.correctAnswer++;
         clearInterval(triv.timerId);
         resultId = setTimeout(triv.guessResult, 1000);
@@ -174,7 +177,9 @@ var triv = {
       // increment to next question set
       triv.currentList++;
       
+     
       // remove the options and results
+      $('.btn').remove();
       $('#results h3').remove();
      
       

@@ -78,10 +78,10 @@
 }
 
 /* Setting up button layout */
-button {
+.btn {
     height: 40px;
     width: 200px;
-    background: purple;
+    background: red;
     justify-content: space-around;
     display: block;
     margin-right: auto;
