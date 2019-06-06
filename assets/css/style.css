@@ -1,0 +1,109 @@
+
+/* container for all content */
+.main-container{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    height: 700px;
+    margin-top: -350px; /* half of height */
+    width: 800px;
+    margin-left: -400px; /* half of width */
+    
+}
+
+/* contains title */
+#title-container {
+   
+    background-color: beige;
+    width: 800px;
+    height: 75px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    
+    
+   
+    
+}
+
+
+
+/* container for the options container and options themselves  */
+#body-container {
+    height: 580px;
+    width: 600px;
+    background: white;
+    margin: auto;
+    position: absolute;
+    margin-left: 100px;
+   
+    
+   
+}
+
+#start{
+    height: 20px;
+    width: 75px;
+    background: pink;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    margin-top: 10px;
+    padding-top: 5px
+}
+/* container for the buttons that will contain the different answer options */
+#options {
+    height: 190px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    background-color: green;
+    position: relative;
+    
+    
+}
+
+#question{
+    height: 50px;
+    width: 500px;
+    background: blue;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Setting up button layout */
+button {
+    height: 40px;
+    width: 200px;
+    background: purple;
+    justify-content: space-around;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    margin-top: 10px;  
+
+    
+}
+
+
+
+
+#results {
+    height: 50px;
+    width: 500px;
+    background: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.text-center{
+    font-size: 25px;
+}
