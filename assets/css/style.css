@@ -45,14 +45,16 @@
 }
 
 #start{
-    height: 20px;
-    width: 80px;
+    height: 30px;
+    width: 150px;
     background: pink;
     position: relative;
     text-align: center; 
-    margin-top: 10px;
     padding-top: 5px;
-    margin-left: 250px;
+    margin-left: 225px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
 }
 /* container for the buttons that will contain the different answer options */
 #options {
@@ -89,8 +91,13 @@
     background: orange;
     font-weight: bold;
     font-size: 18px;
-
     
+
+}
+  
+
+.btn:hover{
+    color: white;
 }
 
 
