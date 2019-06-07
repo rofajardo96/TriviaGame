@@ -129,7 +129,7 @@ var triv = {
           .html('<h3>Thank you for playing!</h3>'+
           '<p>Correct: '+ triv.correctAnswer +'</p>'+
           '<p>Incorrect: '+ triv.wrongAnswer +'</p>'+
-          '<p>Unaswered: '+ triv.unanswered +'</p>'+
+          '<p>Unanswered: '+ triv.unanswered +'</p>'+
           '<p>Give it another go!</p>');
         
         // hide game sction
